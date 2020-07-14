@@ -68,11 +68,15 @@ To compile, run
 
 To generate artifacts, run
 
-    build/sbt package
+   build/sbt -Dsbt.repository.config=build/sbt-config/repositories "++2.11.12 package" 
 
 To execute tests, run
 
     build/sbt test
+
+To generate Maven POM, run
+
+    build/sbt -Dsbt.repository.config=build/sbt-config/repositories "++2.11.12 publishM2"
 
 Refer to [SBT docs](https://www.scala-sbt.org/1.x/docs/Command-Line-Reference.html) for more commands.
 
